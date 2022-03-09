@@ -1,0 +1,3 @@
+Izgled:
+- Coding Snow izgled osnovni
+- Time Tracking Dashboard 4 kartice
