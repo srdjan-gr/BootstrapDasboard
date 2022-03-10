@@ -93,6 +93,10 @@ li {
 
 /* Start of Custom Utiliy Classes */
 
+.opacity-6{
+    opacity: .6;
+}
+
 .bgc-main{
     background-color: var(--primary-color);
 }
