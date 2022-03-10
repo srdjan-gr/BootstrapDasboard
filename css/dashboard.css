@@ -4,18 +4,38 @@
 :root{
     --brand-color:#123123;
 
-    --primary-color: rgb(18, 18, 18);
-    --secondary-color: rgba(59, 59, 59, 0.067);
     /* --background-color: rgba(18, 18, 18, 0.97); */
-    --background-color: rgba(26, 26, 26, 1);
-    --background-color-secondary: rgba(23, 23, 23, 1);
-    --accent-color: rgb(42, 159, 236);
+    /* --background-color-secondary: rgba(23, 23, 23, 1); */
 
-    --hover-accent-color: rgba(42, 158, 236, 0.5);
-    --hover-background-color: rgba(26, 26, 26, 1);
-    --danger-color:rgb(211, 72, 54);
+    --primary-color: #121212;
+    --secondary-color: #3b3b3b11;
+    
+    --background-color: #1a1a1a;
+    --background-overlay-60: rgba(26, 26, 26, 0.6);
+    --background-overlay-70: rgba(26, 26, 26, 0.7);
+    --background-overlay-80: rgba(26, 26, 26, 0.8);
+    --accent-color: #3a9bdb;
+
+    --hover-accent-color: #2a9eec80;
+    --hover-background-color: #1a1a1a;
+    --danger-color:#e74c3c;
+    --danger-success:#18bc9c;
+    --danger-info:#3498db;
 
     --white-color: #f3f3f3;
+
+    --theme-color-1: #6F69AC;
+    --theme-color-5: #2b1bda;
+    --theme-color-2:#95DAC1;
+    --theme-color-3:#FFEBA1;
+    --theme-color-4:#FD6F96;
+
+    --theme-color-11: #073B4C;
+    --theme-color-12:#118AB2;
+    --theme-color-13:#06D6A0;
+    --theme-color-14:#FFD166;
+    --theme-color-15: #EF476F;
+
 
     /* Fonts */
     --body-font: 'Nunito', sans-serif;
@@ -71,6 +91,44 @@ li {
 }
 
 /* Start of Custom Utiliy Classes */
+
+.bgc-main{
+    background-color: var(--primary-color);
+}
+
+.bgc-secondary{
+    background-color: var(--background-color);
+}
+
+.bgc-overlay{
+    background-color: var(--background-overlay-60);
+}
+
+.tc-main{
+    color: var(--font-color-main-dt);
+}
+
+.tc-faid{
+    color: var(--font-color-faid);
+}
+
+.theme-c-1{
+    color: var(--theme-color-11);
+}
+.theme-c-2{
+    color: var(--theme-color-12);
+}
+.theme-c-3{
+    color: var(--theme-color-13);
+}
+.theme-c-4{
+    color: var(--theme-color-14);
+}
+
+.theme-c-5{
+    color: var(--theme-color-15);
+}
+
 .danger-cust{
     color: var(--danger-color);
 }
@@ -78,6 +136,11 @@ li {
 .icon-custom{
     font-size: 2.2rem;
     color: var(--font-color-faid);
+}
+
+.icon-big{
+    font-size: 4.2rem;
+    opacity: .4;
 }
 
 /* Start of Custom Utiliy Classes */
@@ -127,8 +190,8 @@ li {
 }
 
 .header_user h2 {
-    font-size: var(--small-font-size);
-    color: var(--font-color-faid);
+    font-size: var(--normal-font-size);
+    color: var(--font-color-main-dt);
     margin: 0;
 }
 
@@ -149,7 +212,7 @@ li {
     /* height: 2.6rem; */
     height: 3rem;
     color: var( --font-color-faid);
-    background-color: var(--background-color-secondary);
+    background-color: var(--background-color);
     font-size: var(--small-font-size);;
 }
 
@@ -321,6 +384,10 @@ li {
     padding: 2rem;
 }
 
+.card-body a:hover{
+    color: var(--font-color-faid);
+}
+
 /* End of Main Container for data */
 
 
@@ -368,6 +435,11 @@ li {
 
     .header_toggle {
         padding-left: 0rem;
+    }
+
+    .icon-big{
+        font-size: 3.4rem;
+        opacity: .4;
     }
 
 }
