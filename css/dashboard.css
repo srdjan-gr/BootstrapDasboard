@@ -14,6 +14,7 @@
     --background-overlay-60: rgba(26, 26, 26, 0.6);
     --background-overlay-70: rgba(26, 26, 26, 0.7);
     --background-overlay-80: rgba(26, 26, 26, 0.8);
+    --border-fade: rgba(85, 85, 85, 0.3);
     --accent-color: #3a9bdb;
 
     --hover-accent-color: #2a9eec80;
@@ -102,6 +103,12 @@ li {
 
 .bgc-overlay{
     background-color: var(--background-overlay-60);
+}
+
+.brd-faid{
+    /* border: 1px solid var(--font-color-faid); */
+    border: 1px solid var(--border-fade);
+    border-radius: 3px;
 }
 
 .tc-main{
@@ -227,7 +234,7 @@ li {
 .search button{
     /* height: 2.6rem; */
     height: 3rem;
-    background-color: var(--background-color-secondary);
+    background-color: var(--background-color);
     color: var(--accent-color);
 }
 
@@ -304,7 +311,7 @@ li {
     position: relative;
     color: var(--font-color-faid);
     /* margin-bottom: 1.8rem; */
-    padding: .9rem 0 .9rem 2.2rem;
+    padding: 1rem 0 1rem 2.2rem;
     transition: .3s
 }
 
