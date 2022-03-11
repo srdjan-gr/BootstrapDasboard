@@ -76,3 +76,69 @@ function showStats(){
 
 }
 // End Show and hide SubMenus
+
+// Start of Theme Switch
+    
+// let switchTheme = document.getElementById('checkboxSwitch');
+
+// switchTheme.addEventListener('click', () =>{
+
+//     // Change the theme
+//     // document.body.classList.toggle('light');
+//     if(document.getElementById("dark")==true){
+//         document.getElementById("light")==true;
+//     }
+//     else
+//         document.getElementById("dark")==true;
+
+// });
+
+// function postaviTemu(){
+
+//     if(document.getElementById('checkboxSwitch')!=null){
+//         document.getElementById("light").href = "../css/light.css";
+//     }
+//     else{
+//         document.getElementById("light").href = '';
+//     }
+
+//     document.getElementById('checkboxSwitch').addEventListener('click', postaviTemu());
+
+// }
+   
+
+let lightTheme = localStorage.getItem("lightTheme");
+const prekidac = document.getElementById("switcher");
+
+    const lightModeOn = () => {
+        // 1. Add class to body
+        document.body.classList.add('lightTheme');
+
+        // 2. Local storage 
+        localStorage.setItem('lightTheme', 'enabled');
+    }
+
+    const lightModeOff = () => {
+        // 1. Remove class to body
+        document.body.classList.remove('lightTheme');
+
+        // 2. Local storage 
+        localStorage.setItem('lightTheme', null);
+    }
+
+    if(lightTheme === "enabled"){
+        lightModeOn();
+    }
+
+    prekidac.addEventListener("click", () => {
+        
+        lightTheme = localStorage.getItem("lightTheme");
+
+        if(lightTheme !== 'enabled') {
+            lightModeOn();
+        }
+        else{
+            lightModeOff();
+        }
+    });
+

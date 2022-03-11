@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="icon" href="">
-    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="css/style.css" id="dark">
+
+    <!-- <link rel="stylesheet" href="" id="light" "> -->
+
+    <!-- <link rel="icon" href="">
+    <link rel="shortcut icon" href=""> -->
     <title>Dashboard</title>
 </head>
 <body id="body-pd">
@@ -35,7 +38,7 @@
         
             <div class="loged_user_info d-flex w-md justify-content-end">
                 <div class="header_user" >
-                    <h2 class="tc-faid">Ime i Prezime</h2>
+                    <h2>Ime i Prezime</h2>
                     <h2>Status</h2>
                 </div>
                 <div class="header_img"> <img src="img/loggedUsers/11.png" alt=""> </div>
@@ -88,13 +91,18 @@
                     </ul>
                 </div>
             </div> 
-            <div class="switch">
-                <div class="theme-switch ">
-                    <i class='bx bxs-circle'></i>
-                    <i class='bx bx-circle' ></i>
+
+            <!--Start of  Theme Swich -->
+            <div class="bottom-container">
+                <div class="switch">
+                        <input type="checkbox" class="checkboxSwitch" id="checkboxSwitch">
+                        <label for="checkboxSwitch" class="switch-theme d-flex"">
+                            <div class="switcher" id="switcher"  ></div>
+                        </label>
                 </div>
+                <a href="#" class="nav_link "> <i class='bx bx-log-out nav_icon danger-cust'></i> <span class="nav_name">SignOut</span> </a>
             </div>
-            <a href="#" class="nav_link "> <i class='bx bx-log-out nav_icon danger-cust'></i> <span class="nav_name">SignOut</span> </a>
+            <!--End of Theme Swich -->
         </nav>
     </div>
     <!-- End of Side menu -->
