@@ -2,28 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 :root{
-    --brand-color:#123123;
-
-    /* --background-color: rgba(18, 18, 18, 0.97); */
-    /* --background-color-secondary: rgba(23, 23, 23, 1); */
+    --brand-color:#23a56b;
 
     --primary-color: #121212;
     --secondary-color: #3b3b3b11;
+    --accent-color: #3a9bdb;
+    --white-color: #f3f3f3;
     
+    --primary-color-80: rgba(18, 18, 18, 0.6);
+    --background-logo-overlay-color: rgba(18, 18, 18, 0.7);
+
     --background-color: #1a1a1a;
     --background-overlay-60: rgba(26, 26, 26, 0.6);
     --background-overlay-70: rgba(26, 26, 26, 0.7);
     --background-overlay-80: rgba(26, 26, 26, 0.8);
+    --background-overlay-yellow: hsla(47, 100%, 82%, 0.2);
     --border-fade: rgba(85, 85, 85, 0.3);
-    --accent-color: #3a9bdb;
-
+   
     --hover-accent-color: #2a9eec80;
     --hover-background-color: #1a1a1a;
+
     --danger-color:#e74c3c;
     --danger-success:#18bc9c;
     --danger-info:#3498db;
 
-    --white-color: #f3f3f3;
 
     --theme-color-1: #6F69AC;
     --theme-color-5: #2b1bda;
@@ -51,7 +53,6 @@
     --small-font-size: 1.3rem;
     --normal-font-size: 1.6rem;
     --big-font-size: 2rem;
-
 
     --header-height: 5.4rem;
     --nav-width: 68px;
@@ -126,6 +127,10 @@ li {
 }
 
 .tc-faid{
+    color: var(--font-color-faid);
+}
+
+.tc-accent{
     color: var(--font-color-faid);
 }
 
@@ -283,23 +288,35 @@ li {
     column-gap: 1rem;
 }
 
-.nav_logo {
+/* .ot{
+    position: relative;
+} */
+
+.company-logo{
     height: 12rem;
     margin-bottom: 1.8rem;
-    /* background-color: var(--primary-color); */
+}
+
+.company-logo-overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(var(--background-logo-overlay-color), var(--background-logo-overlay-color)), url(../img/bg-logo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding: 0 0 0 2.2rem;  
+}
+
+/* .nav_logo {
+    height: 12rem;
+    margin-bottom: 1.8rem;
     background: url(../img/bg-logo.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: bottom left;
     z-index: 1;
     padding: 0 0 0 2.2rem;
-}
-
-.overlay {
-    background-color: white;
-    z-index: 2;
-    /* position: relative; */
-}
+} */
 
 .nav_logo-icon {
     font-size: 2.2rem;
