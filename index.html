@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css" id="dark">
 
@@ -61,8 +62,8 @@
             
                 <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
                     <ul class="nav_list-ul">
-                        <h1 class="nav_link" id="nav_link-user" onclick="showUser()"><i class='bx bx-user nav_icon'></i><span class="nav_name">Users</span><i class='bx bx-chevron-down'></i></h1>
-                        <li class="nav_list-li" id="navUser" >
+                        <h1 class="nav_link" id="nav_link-user" ><i class='bx bx-user nav_icon'></i><span class="nav_name">Users</span><i class='bx bx-chevron-right dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navUser" >
                             <a href="#" class="nav_link-li"><span class="">Add User</span></a> 
                             <a href="#" class="nav_link-li"><span class="">Delete USer</span></i> </a> 
                             <a href="#" class="nav_link-li"><span class="">Update User</span></i> </a> 
@@ -73,8 +74,8 @@
                     <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> 
 
                     <ul class="nav_list-ul">
-                        <h1 class="nav_link" id="nav_link-stats" onclick="showStats()"><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">Stats</span><i class='bx bx-chevron-down'></i></h1>
-                        <li class="nav_list-li" id="navStats" >
+                        <h1 class="nav_link" id="nav_link-stats" ><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">Stats</span><i class='bx bx-chevron-right dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navStats" >
                             <a href="#" class="nav_link-li"><span class="">Users .log</span></a> 
                             <a href="#" class="nav_link-li"><span class="">Coments .log</span></i> </a> 
                             <a href="#" class="nav_link-li"><span class="">Products .log</span></i> </a> 
@@ -82,8 +83,8 @@
                     </ul>
 
                     <ul class="nav_list-ul">
-                        <h1 class="nav_link" id="nav_link-settings" onclick="showSettings()"><i class='bx bx-cog  nav_icon'></i><span class="nav_name">Settings</span><i class='bx bx-chevron-down'></i></h1>
-                        <li class="nav_list-li" id="navSettings" >
+                        <h1 class="nav_link" id="nav_link-settings" ><i class='bx bx-cog  nav_icon'></i><span class="nav_name">Settings</span><i class='bx bx-chevron-right dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navSettings" >
                             <a href="#" class="nav_link-li"><span class="">Profile picture</span></a> 
                             <a href="#" class="nav_link-li"><span class="">Ligh/Dark Theme</span></i> </a> 
                             <a href="#" class="nav_link-li"><span class="">Ligh/Dark Theme</span></i> </a> 
@@ -229,6 +230,12 @@
 
     </div>
     <!-- Start of Main Container -->
+
+<script type="text/javascript" >
+
+
+
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>

@@ -40,73 +40,159 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 // Start Show and hide SubMenus
-function showUser(){
 
-    if(document.getElementById("navUser").style.display=="flex"){
-        document.getElementById("navUser").style.display="none";
-    }else{
-        document.getElementById("navUser").style.display="flex";
+// JQuery for submenus
+$(document).ready(function(){
+    // Toogle submenus
+    $('.nav_link').click(function(){
+        $(this).next('.nav_list-submenu').slideToggle();
+        $(this).find('.dropdownIco').toggleClass('rotateIcon');
+    });
+});
+
+
+
+
+
+
+let icon=document.querySelector('.bx-chevron-right');
+
+function rotateIcon(){
+    if(icon){
+        icon.style=`
+            transform: rotate(90deg);
+            transform-origin: 25% 50%;
+            transition: transform .2s linear;
+        `;
     }
-
-    document.getElementById("nav_link-user").addEventListener('click', showUser());
-
 }
 
-function showSettings(){
-
-    if(document.getElementById("navSettings").style.display=="flex"){
-        document.getElementById("navSettings").style.display="none";
-    }else{
-        document.getElementById("navSettings").style.display="flex";
-    }
-
-    document.getElementById("nav_link-settings").addEventListener('click', showSettings());
-
-}
-
-function showStats(){
-
-    if(document.getElementById("navStats").style.display=="flex"){
-        document.getElementById("navStats").style.display="none";
-    }else{
-        document.getElementById("navStats").style.display="flex";
-    }
-
-    document.getElementById("nav_link-stats").addEventListener('click', showStats());
-
-}
-// End Show and hide SubMenus
-
-// Start of Theme Switch
+function resetIcon(){
     
-// let switchTheme = document.getElementById('checkboxSwitch');
+    if(!icon){
+        icon.style=`
+        transform: rotate(0deg);
+        transform-origin: 25% 50%;
+        transition: transform .2s linear;
+    `;
+    }
+}
 
-// switchTheme.addEventListener('click', () =>{
+//function showUser(){
 
-//     // Change the theme
-//     // document.body.classList.toggle('light');
-//     if(document.getElementById("dark")==true){
-//         document.getElementById("light")==true;
+// if(document.getElementById("navUser").style.display=="flex"){
+//     document.getElementById("navUser").style.display="none";
+
+//     resetIcon();
+    
+
+//     }else{
+//         document.getElementById("navUser").style.display="flex";
+        
+//         rotateIcon();
 //     }
-//     else
-//         document.getElementById("dark")==true;
 
-// });
-
-// function postaviTemu(){
-
-//     if(document.getElementById('checkboxSwitch')!=null){
-//         document.getElementById("light").href = "../css/light.css";
-//     }
-//     else{
-//         document.getElementById("light").href = '';
-//     }
-
-//     document.getElementById('checkboxSwitch').addEventListener('click', postaviTemu());
 
 // }
-   
 
+
+// function showUser(element){
+
+//     function example(element){
+//         var name = $(element).attr('name');
+//     }
+
+//     if(document.querySelector(".nav_list-submenu").style.display=="flex"){
+//         document.querySelector(".nav_list-submenu").style.display="none";
+
+
+        
+
+//         }else{
+//             document.querySelector(".nav_list-submenu").style.display="flex";
+            
+        
+//         }
+
+
+// }
+
+
+
+
+
+
+
+
+// function showUser(){
+
+//     if(document.getElementById("navUser").style.display=="flex"){
+//         document.getElementById("navUser").style.display="none";
+  
+//         document.querySelector('#iconUser').style=`
+//             transform: rotate(0deg);
+//             transform-origin: 25% 50%;
+//             transition: transform .2s linear;
+//             `;
+//     }else{
+//         document.getElementById("navUser").style.display="flex";
+
+//         document.querySelector('#iconUser').style=`
+//             transform: rotate(90deg);
+//             transform-origin: 25% 50%;
+//             transition: transform .2s linear;
+//             `;
+//     }
+// }
+
+// function showSettings(){
+
+//     if(document.getElementById("navSettings").style.display=="flex"){
+//         document.getElementById("navSettings").style.display="none";
+
+//         let icon=document.querySelector('#iconSettings').style=`
+//         transform: rotate(0deg);
+//         transform-origin: 25% 50%;
+//         transition: transform .2s linear;
+        
+//         `;
+
+//     }else{
+//         document.getElementById("navSettings").style.display="flex";
+//         let icon=document.querySelector('#iconSettings').style=`
+//             transform: rotate(90deg);
+//             transform-origin: 25% 50%;
+//             transition: transform .2s linear;
+//             `;
+//     }
+// }
+
+// function showStats(){
+
+//     if(document.getElementById("navStats").style.display=="flex"){
+//         document.getElementById("navStats").style.display="none";
+
+//         document.querySelector('#iconStats').style=`
+//             transform: rotate(00deg);
+//             transform-origin: 25% 50%;
+//             transition: transform .2s linear;
+//             `;
+        
+//     }else{
+//         document.getElementById("navStats").style.display="flex";
+    
+//         document.querySelector('#iconStats').style=`
+//             transform: rotate(90deg);
+//             transform-origin: 25% 50%;
+//             transition: transform .2s linear;
+            
+//             `;
+//     }
+// }
+// End Show and hide SubMenus
+
+
+// Start of Theme Switch
 let lightTheme = localStorage.getItem("lightTheme");
 const prekidac = document.getElementById("switcher");
 
@@ -141,4 +227,4 @@ const prekidac = document.getElementById("switcher");
             lightModeOff();
         }
     });
-
+// End of Theme Switch
