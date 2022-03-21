@@ -3,4 +3,5 @@ Izgled:
 - Time Tracking Dashboard 4 kartice
 
 -ToDo lista treba da postoji negde - Mozda krajnje desno
+   - To do lista je u stvari google kalendar odakle imamo podatke i gde cuvamo podatke 
 

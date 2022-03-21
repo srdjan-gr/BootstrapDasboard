@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style.css" id="dark">
+
+    <!-- <link rel="stylesheet" href="" id="light" "> -->
+
+    <!-- <link rel="icon" href="">
+    <link rel="shortcut icon" href=""> -->
+    <title>ToDo</title>
+</head>
+<body id="body-pd">
+    
+    <!-- Start of Header -->
+    <header class="header" id="header">
+        <div class="left-header d-flex">
+            <div class="header_toggle d-flex align-items-center" > <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <div class="container-md search px-4 d-flex align-items-center">
+                <form class="d-flex w-md ">
+                    <input class="form-control border-0 rounded-0 rounded-start" type="search" placeholder="Search..." aria-label="Search">
+                    <button class="btn  py-0 d-flex align-items-center rounded-0 rounded-end" type="submit"><i class='bx bx-search p-0 th-2 fs-2 pt-1'></i></button>
+                </form>
+            </div>
+        </div>
+       
+        <div class="right-header d-flex">
+            <div class="d-flex align-items-center pe-4" > <i class='bx bx-bell icon-custom' id="bell"></i> </div>
+            <div class="d-flex align-items-center pe-4" > <i class='bx bx-message icon-custom' id="message"></i> </div>
+        
+            <div class="loged_user_info d-flex w-md justify-content-end">
+                <div class="header_user" >
+                    <h2>Ime i Prezime</h2>
+                    <h2>Status</h2>
+                </div>
+                <div class="header_img"> <img src="../img/loggedUsers/11.png" alt=""> </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Side menu -->
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> 
+                <!-- Company logo -->
+                <div class="company-logo">
+                    <div class="company-logo-overlay d-flex">
+                        <a href="../index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">CompLogo</span> </a>
+                    </div>
+                </div>
+                <!-- End of Company logo -->
+            
+                <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                    <ul class="nav_list-ul">
+                        <h1 class="nav_link" id="nav_link-user" ><i class='bx bx-user nav_icon'></i><span class="nav_name">Users</span><i class='bx bx-chevron-down dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navUser" >
+                            <a href="#" class="nav_link-li"><span class="">Add User</span></a> 
+                            <a href="#" class="nav_link-li"><span class="">Delete USer</span></i> </a> 
+                            <a href="#" class="nav_link-li"><span class="">Update User</span></i> </a> 
+                        </li>
+                    </ul>
+                    <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> 
+                    <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> 
+                    <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> 
+
+                    <ul class="nav_list-ul">
+                        <h1 class="nav_link" id="nav_link-stats" ><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">Stats</span><i class='bx bx-chevron-down dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navStats" >
+                            <a href="#" class="nav_link-li"><span class="">Users .log</span></a> 
+                            <a href="#" class="nav_link-li"><span class="">Coments .log</span></i> </a> 
+                            <a href="#" class="nav_link-li"><span class="">Products .log</span></i> </a> 
+                        </li>
+                    </ul>
+
+                    <ul class="nav_list-ul">
+                        <h1 class="nav_link" id="nav_link-settings" ><i class='bx bx-cog  nav_icon'></i><span class="nav_name">Settings</span><i class='bx bx-chevron-down dropdownIco'></i></h1>
+                        <li class="nav_list-submenu" id="navSettings" >
+                            <a href="#" class="nav_link-li"><span class="">Profile picture</span></a> 
+                            <a href="#" class="nav_link-li"><span class="">Ligh/Dark Theme</span></i> </a> 
+                            <a href="#" class="nav_link-li"><span class="">Ligh/Dark Theme</span></i> </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+            <!--Start of  Theme Swich -->
+            <div class="bottom-container">
+                <div class="switch">
+                        <input type="checkbox" class="checkboxSwitch" id="checkboxSwitch">
+                        <label for="checkboxSwitch" class="switch-theme d-flex"">
+                            <div class="switcher" id="switcher"  ></div>
+                        </label>
+                </div>
+                <a href="#" class="nav_link "> <i class='bx bx-log-out nav_icon danger-cust'></i> <span class="nav_name">SignOut</span> </a>
+            </div>
+            <!--End of Theme Swich -->
+        </nav>
+    </div>
+    <!-- End of Side menu -->
+
+    <!-- Start of Main Container -->
+    <div class="main height-100">
+
+        <!-- Start of Daily Summery Section -->
+        <section>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item tc-faid" aria-current="page">ToDo</li>
+                </ol>
+              </nav>
+        </section>
+        <!-- End of Daily Summery Section -->
+
+        <!-- Start of Calendar -->
+        <section>
+            <div class="calendar">
+                <h2 class="tc-faid mt-5">Calendar</h2>
+               
+                <div class="calendar-container">
+                  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBelgrade&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=1&showTz=0&src=ZHJodDdldDVvaXRjaXZ0ZnZjcjFxNms5anNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457" style="border:solid 1px rgb(175, 175, 175)" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- End of Calendar -->
+    </div>
+    <!-- End of Main Container -->
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

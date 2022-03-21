@@ -118,7 +118,12 @@ body {
 } */
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:hover{
+    color: var(--hover-accent-color);
 }
 
 ul {
@@ -198,6 +203,7 @@ li {
 }
 
 /* Start of Custom Utiliy Classes */
+
 
 /* Start of Navigation */
 .header {
@@ -381,7 +387,7 @@ li {
 }
 
 .rotateIcon{
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     transform-origin: 25% 50%;
     transition: transform .2s linear;
 }
@@ -424,12 +430,12 @@ li {
 
 /* Start of Theme Switch */
 .switch{
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.7rem;
 }
 
 .switch-theme{
     position: relative;
-    width: 3.4rem;
+    width: 3.2rem;
     height: 1.6rem;
     background-color: var(--themeSwitchBackground);
     border-radius: 8rem;
@@ -473,6 +479,12 @@ li {
 .card-body a:hover{
     color: var(--font-color-faid);
 }
+
+/* Start of ToDo page - Calendar  */
+.calendar-container{
+    width: 70%;
+}
+/* End of ToDo page - Calendar  */
 
 /* End of Main Container for data */
 
